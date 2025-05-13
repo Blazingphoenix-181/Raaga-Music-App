@@ -1,0 +1,101 @@
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+}   
+
+nav{
+    color: rgb(0, 0, 0);
+}
+nav ul{
+    display: flex;
+    font-size: 1.4rem;
+    list-style-type: none;
+    height: 65px;
+   background-color: rgb(255, 255, 255);
+}
+nav ul li{
+    padding: 0 20px;
+    
+}
+.brand img{
+    width: 65px;
+}
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+.bottom{
+    position:sticky;
+    height: 100px;
+    background-color: rgb(23, 23, 23);
+    color: rgb(255, 255, 255);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.icons{
+    margin-top:15px ;
+    
+}
+.icons button{
+    cursor: pointer;
+}
+.container{
+    height: 80vh;
+    background-color: rgb(108, 108, 108);
+    color: rgb(0, 0, 0);
+    margin: 23px auto;
+    width: 70%;
+    border-radius:12px ;
+    background-image: url("bg.jpeg");
+}
+#myprogressbar{
+    width: 80vw;
+    cursor: pointer;
+    
+}
+.song{
+    height: 50px;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    width: 30%;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+.song img{
+    width: 40px;
+    border-radius: 34px;
+}
+.songlist{
+    margin: 0 19px;
+    
+}
+.songlist i{
+    cursor: pointer;
+}
+.songinfo{
+    position: absolute;
+    left: 9.5vw;
+}
+.songlist h1{
+    
+    color: white;
+}
+.songlist span{
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+  
