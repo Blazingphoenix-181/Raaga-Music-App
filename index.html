@@ -3,95 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAAGA MUSIC </title>
+    <title>Raaga Music</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a67b69a08c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav>
         <ul>
-            <li class="brand"><img src="logo" alt="RAGA">RAGA</li>
-            <li>Home</li>
-            <li>Abouts</li>
-
+            <li class="brand"><img src="logo" alt="RAGA"> RAGA</li>
+           <li><button class="nav-btn" onclick="openModal('homeModal')">Home</button></li>
+        <li><button class="nav-btn" onclick="openModal('aboutModal')">About</button></li>
         </ul>
     </nav>
-    <div class="container">
+    <div id="home" class="hero">
+       
+    <div class="main-container">
         
-        <div class="songlist">
-            <h1>Best of Arijit Singh</h1>
-           
-            <div>
-                <div class="song">
-                    <img src="kasturi.jpeg" alt="1">
-                    <span>Kasturi</span>
-                    <span class="songlist"><span>05:34 <i class="fa-regular fa-circle-play"></i></span></span>
-                </div>
-                <div class="song">
-                    <img src="tera fitoor.jpeg" alt="1">
-                    <span>Tera Fitoor</span>
-                    <span class="songlist"><span>05:34 <i class="fa-regular fa-circle-play"></i></span></span>
-                </div>
-                <div class="song">
-                    <img src="images.jpeg" alt="1">
-                    <span>Tum hi ho</span>
-                    <span class="songlist"><span>05:34 <i class="fa-regular fa-circle-play"></i></span></span>
-                </div>
-                <div class="song">
-                    <img src="tu har lamha.jpeg" alt="1">
-                    <span>Tu har Lamha</span>
-                    <span class="songlist"><span>05:34 <i class="fa-regular fa-circle-play"></i></span></span>
-                </div>
-                <div class="song">
-                    <img src="pal.jpeg" alt="1">
-                    <span>Pal</span>
-                    <span class="songlist"><span>05:34 <i class="fa-regular fa-circle-play"></i></span></span>
-                </div>
-                <div class="song">
-                    <img src="khamosiyan.jpeg" alt="1">
-                    <span>Khamosiyan</span>
-                    <span class="songlist"><span>05:34 <i class="fa-regular fa-circle-play"></i></span></span>
-                </div>
-                <div class="song">
-                    <img src="gerua.jpeg" alt="1">
-                    <span>Gerua</span>
-                    <span class="songlist"><span>05:34 <i class="fa-regular fa-circle-play"></i></span></span>
-                </div>
-                <div class="song">
-                    <img src="kesariya.jpeg" alt="1">
-                    <span>Kesariya</span>
-                    <span class="songlist"><span>05:34 <i class="fa-regular fa-circle-play"></i></span></span>
-                </div>
-                <div class="song">
-                    <img src="ae dil hai muskil.jpeg" alt="1">
-                    <span>Ae Dil Hai Muskil</span>
-                    <span class="songlist"><span>05:34 <i class="fa-regular fa-circle-play"></i></span></span>
-                </div>
-                <div class="song">
-                    <img src="mareez e ishq.jpeg" alt="1">
-                    <span>Mareez-E-Ishq</span>
-                    <span class="songlist"><span>05:34 <i class="fa-regular fa-circle-play"></i></span></span>
-                </div>
+        <aside class="sidebar">
+            <h2>Best of Arijit Singh</h2>
+            <div id="songList" class="songlist"></div>
+        </aside>
+
+       
+        <section class="content">
+            <div class="now-playing">
+                <img id="songCover" src="kasturi.jpeg" alt="cover">
+                <h2 id="songTitle">Kasturi</h2>
+                <p id="lyrics">🎵 Lyrics will appear here...</p>
             </div>
-        </div>
-        <div class="banner"></div>
+        </section>
     </div>
-    <div class="bottom">
-        
-        
-        <input type="range" name="range" id="myprogressbar" min="0"  max="100" value="100">
+
+    <footer class="bottom">
+        <input type="range" id="myProgressBar" min="0" max="100" value="0">
         <div class="icons">
-            <button id="prev" class="fa-solid fa-3x fa-backward"></button>
-            <button id="masterPlay" class="fa-solid fa-3x fa-play-circle"></button>
-            <button id="next" class="fa-solid fa-3x fa-forward"></button>
+            <button id="prev" class="fa-solid fa-backward"></button>
+            <button id="masterPlay" class="fa-solid fa-play-circle"></button>
+            <button id="next" class="fa-solid fa-forward"></button>
+        </div>
+        <div class="songinfo">
+            <img src="playing.gif" alt="playing"> Arijit Singh
+        </div>
+    </footer>
+    
+</section>
 
-
-        
-    </div>
-    <div class="songinfo">
-        <img src="playing.gif" alt="" >Arijit Singh
-    </div>
-    <script src=""></script>
-    <script src="https://kit.fontawesome.com/a67b69a08c.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+
+<div id="homeModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('homeModal')">&times;</span>
+        <h2>Welcome to Raaga Music</h2>
+        <p>Feel the music with every beat. Choose your favorite song and enjoy real-time lyrics and more.</p>
+    </div>
+</div>
+
+
+<div id="aboutModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('aboutModal')">&times;</span>
+        <h2>About Raaga Music</h2>
+        <p>Raaga is a modern music web app offering curated playlists, lyrics, and a seamless audio experience.</p>
+        <h3>Developer Info</h3>
+        <p>Created by <strong>Sagnik Chatterjee</strong>, B.Tech student passionate about Web Development, Deep Learning, IoT Security, and Cybersecurity.<br>
+        Connect on:
+        <a href="https://www.linkedin.com/in/sagnik1811" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/Sagnik1811" target="_blank">GitHub</a></p>
+    </div>
+</div>
+
+
+
 </body>
 </html>

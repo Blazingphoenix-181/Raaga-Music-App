@@ -1,101 +1,164 @@
-body{
-    background-color: rgb(0, 0, 0);
-}
-
-*{
+body {
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
 
-}   
-
-nav{
-    color: rgb(0, 0, 0);
-}
-nav ul{
-    display: flex;
-    font-size: 1.4rem;
-    list-style-type: none;
-    height: 65px;
-   background-color: rgb(255, 255, 255);
-}
-nav ul li{
-    padding: 0 20px;
-    
-}
-.brand img{
-    width: 65px;
-}
-.brand{
+nav ul {
     display: flex;
     align-items: center;
-    font-weight: bolder;
-    font-size: 1.3rem;
+    background-color: #1db954;
+    color: white;
+    list-style: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
 }
-.bottom{
-    position:sticky;
-    height: 100px;
-    background-color: rgb(23, 23, 23);
-    color: rgb(255, 255, 255);
-    bottom: 0;
+
+.brand {
     display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: auto;
+}
+
+.brand img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.main-container {
+    display: flex;
+    height: 80vh;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #181818;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    color: #1db954;
+    margin-bottom: 20px;
+}
+
+.songlist .song {
+    display: flex;
+    align-items: center;
+    background-color: #282828;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.song img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.content {
+    flex: 1;
+    background: #202020;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.now-playing img {
+    width: 200px;
+    border-radius: 12px;
+}
+
+.now-playing h2 {
+    margin: 20px 0 10px;
+    color: #1db954;
+}
+
+.now-playing p {
+    color: #ddd;
+    font-size: 1rem;
+    max-width: 600px;
+    text-align: center;
+}
+
+.bottom {
+    background-color: #181818;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#myProgressBar {
+    width: 80%;
+    margin: 10px 0;
+}
+
+.icons button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.songinfo {
+    margin-top: 10px;
+}
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    
 }
-.icons{
-    margin-top:15px ;
-    
+
+.modal-content {
+    background-color: #181818;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    color: #fff;
+    position: relative;
+    box-shadow: 0 0 20px #1db954;
 }
-.icons button{
-    cursor: pointer;
+
+.modal-content h2 {
+    color: #1db954;
+    margin-bottom: 10px;
 }
-.container{
-    height: 80vh;
-    background-color: rgb(108, 108, 108);
-    color: rgb(0, 0, 0);
-    margin: 23px auto;
-    width: 70%;
-    border-radius:12px ;
-    background-image: url("bg.jpeg");
+
+.modal-content a {
+    color: #1db954;
+    text-decoration: none;
 }
-#myprogressbar{
-    width: 80vw;
-    cursor: pointer;
-    
-}
-.song{
-    height: 50px;
-    display: flex;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    width: 30%;
-    margin: 12px 0;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 34px;
-}
-.song img{
-    width: 40px;
-    border-radius: 34px;
-}
-.songlist{
-    margin: 0 19px;
-    
-}
-.songlist i{
-    cursor: pointer;
-}
-.songinfo{
+
+.close {
     position: absolute;
-    left: 9.5vw;
-}
-.songlist h1{
-    
+    top: 10px; right: 15px;
+    font-size: 24px;
     color: white;
+    cursor: pointer;
 }
-.songlist span{
-    font-size: 1.5rem;
-    color: rgb(0, 0, 0);
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.1rem;
+    cursor: pointer;
 }
-  
